@@ -24,10 +24,19 @@ Stm32Application {
         "libs/lwip/include",
     ]
     cpp.defines: [
-        "STM32F4XX",
-        "STM32F40_41xxx",
-        "USE_STDPERIPH_DRIVER",
-        "HSE_VALUE=168000000",
+    "USE_FULL_LL_DRIVER",
+    "HSE_VALUE=8000000",
+    "HSE_STARTUP_TIMEOUT=100",
+    "LSE_STARTUP_TIMEOUT=5000",
+    "LSE_VALUE=32768",
+    "MSI_VALUE=4194000",
+    "HSI_VALUE=16000000",
+    "LSI_VALUE=37000",
+    "VDD_VALUE=3300",
+    "PREFETCH_ENABLE=0",
+    "INSTRUCTION_CACHE_ENABLE=1",
+    "DATA_CACHE_ENABLE=1",
+    "STM32L011xx",
     ]
     Properties {
         condition: cpp.debugInformation
